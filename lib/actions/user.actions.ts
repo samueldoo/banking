@@ -58,6 +58,7 @@ export const signUp = async ({ password, ...userData }: SignUpParams) => {
   let newUserAccount;
 
   try {
+    // Create a user account
     const { account, database } = await createAdminClient();
 
     newUserAccount = await account.create(
